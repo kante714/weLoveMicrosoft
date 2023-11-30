@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Git and GitHub command</h1>
+    <pre>hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example
+        $ ls -la
+        total 0
+        drwxr-xr-x 1 hp 197121 0 Nov 30 15:38 ./
+        drwxr-xr-x 1 hp 197121 0 Nov 30 15:37 ../
+        drwxr-xr-x 1 hp 197121 0 Nov 30 15:37 css/
+        -rw-r--r-- 1 hp 197121 0 Nov 30 15:38 index.html
+        drwxr-xr-x 1 hp 197121 0 Nov 30 15:38 js/
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example
+        $ git init
+        Initialized empty Git repository in C:/Users/hp/OneDrive/Desktop/Mission Software Engineer/Class24/example/.git/
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (master)
+        $ ls
+        css/  index.html  js/
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (master)
+        $ ls -la
+        total 4
+        drwxr-xr-x 1 hp 197121 0 Nov 30 16:09 ./
+        drwxr-xr-x 1 hp 197121 0 Nov 30 15:37 ../
+        drwxr-xr-x 1 hp 197121 0 Nov 30 16:09 .git/
+        drwxr-xr-x 1 hp 197121 0 Nov 30 15:37 css/
+        -rw-r--r-- 1 hp 197121 0 Nov 30 15:38 index.html
+        drwxr-xr-x 1 hp 197121 0 Nov 30 15:38 js/
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (master)
+        $ git add .
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (master)
+        $ git status
+        On branch master
+        
+        No commits yet
+        
+        Changes to be committed:
+          (use "git rm --cached <file>..." to unstage)
+                new file:   css/style.css
+                new file:   index.html
+                new file:   js/main.js
+        
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (master)
+        $ git commit -m 'My all practical folder and file'
+        [master (root-commit) 1b4c3d7] My all practical folder and file
+         3 files changed, 0 insertions(+), 0 deletions(-)
+         create mode 100644 css/style.css
+         create mode 100644 index.html
+         create mode 100644 js/main.js
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (master)
+        $ git status
+        On branch master
+        nothing to commit, working tree clean
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (master)
+        $ touch about.html
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (master)
+        $ git add .
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (master)
+        $ git status
+        On branch master
+        Changes to be committed:
+          (use "git restore --staged <file>..." to unstage)
+                new file:   about.html
+        
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (master)
+        $ git commit -m 'Added about.html file'
+        [master 130b9ff] Added about.html file
+         1 file changed, 0 insertions(+), 0 deletions(-)
+         create mode 100644 about.html
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (master)
+        $ git status
+        On branch master
+        nothing to commit, working tree clean
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (master)
+        $ git branch -M main
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (main)
+        $ git status
+        On branch main
+        nothing to commit, working tree clean
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (main)
+        $ git branch risky
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (main)
+        $ git checkout risky
+        Switched to branch 'risky'
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (risky)
+        $ git status
+        On branch risky
+        nothing to commit, working tree clean
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (risky)
+        $ touch risky.html
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (risky)
+        $ git add.
+        ggit: 'add.' is not a git command. See 'git --help'.
+        
+        The most similar command is
+                add
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (risky)
+        $ git add .
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (risky)
+        $ git commit -m 'I made a risky change'
+        [risky 388b0b8] I made a risky change
+         1 file changed, 0 insertions(+), 0 deletions(-)
+         create mode 100644 risky.html
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (risky)
+        $ git status
+        On branch risky
+        nothing to commit, working tree clean
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (risky)
+        $ git checkout main
+        Switched to branch 'main'
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (main)
+        $ git checkout risky
+        Switched to branch 'risky'
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (risky)
+        $ git checkout main
+        Switched to branch 'main'
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (main)
+        $ git merge risky
+        Updating 130b9ff..388b0b8
+        Fast-forward
+         risky.html | 0
+         1 file changed, 0 insertions(+), 0 deletions(-)
+         create mode 100644 risky.html
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (main)
+        $ git status
+        On branch main
+        nothing to commit, working tree clean
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (main)
+        $ git remote add origin https://github.com/kante714/weLoveMicrosoft.git
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (main)
+        $ git push -u origin main
+        Enumerating objects: 9, done.
+        Counting objects: 100% (9/9), done.
+        Delta compression using up to 4 threads
+        Compressing objects: 100% (6/6), done.
+        Writing objects: 100% (9/9), 876 bytes | 41.00 KiB/s, done.
+        Total 9 (delta 1), reused 0 (delta 0), pack-reused 0
+        remote: Resolving deltas: 100% (1/1), done.
+        To https://github.com/kante714/weLoveMicrosoft.git
+         * [new branch]      main -> main
+        branch 'main' set up to track 'origin/main'.
+        
+        hp@Healer MINGW64 ~/OneDrive/Desktop/Mission Software Engineer/class24/example (main)
+        $
+        </pre>
+</body>
+</html>
